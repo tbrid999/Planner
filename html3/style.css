@@ -1,0 +1,148 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #e0e0e0;
+    background-color: #1e1e1e;
+}
+
+main {
+    padding: 20px;
+}
+
+.todo-app, .weather-app {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn-close {
+    background: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.large-btn {
+    font-size: 18px;
+}
+
+#open-task-form-btn {
+    background-color: #007aff;
+    color: #fff;
+}
+
+#add-or-update-task-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+#fetchWeatherBtn {
+    background-color: #007aff;
+    color: #fff;
+}
+
+.close-task-form-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.close-icon, .close-weather-icon {
+    fill: none;
+    stroke: #f44336;
+}
+
+.hidden {
+    display: none;
+}
+
+.task-form, .weather-app {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.task-form-label, .weather-app h1 {
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.task-form-footer .btn, .weather-info .btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.warning-message-text, .discard-message-text {
+    color: #e0e0e0;
+}
+
+.warning-dialog-btn-container .btn, .confirm-close-dialog-btn-container .btn {
+    background-color: #007aff;
+    color: #fff;
+}
+
+#tasks-container {
+    margin-top: 20px;
+}
+
+.weather-info {
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+#logo {
+    display: block;
+    margin: 20px auto;
+    width: 150px;
+}
+
+#logo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px; 
+    z-index: 1000; 
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+dialog p {
+    margin: 20px;
+}
+
+dialog .btn {
+    background-color: #007aff;
+    color: #fff;
+    margin: 5px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <!-- To-Do App Section -->
+    <div class="todo-app">
+      <button id="open-task-form-btn" class="btn large-btn">+ New Task</button>
+      <form class="task-form hidden" id="task-form">
+        <div class="task-form-header">
+          <button id="close-task-form-btn" class="close-task-form-btn" type="button" aria-label="close">
+            <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+              <path fill="none" stroke="#F44336" stroke-width="2" d="M3 3L21 21M3 21L21 3"/>
+            </svg>
+          </button>
+        </div>
+        <div class="task-form-body">
+          <label class="task-form-label" for="title-input">Title</label>
+          <input required type="text" class="form-control" id="title-input" value="" />
+          <label class="task-form-label" for="date-input">Date</label>
+          <input type="date" class="form-control" id="date-input" value="" />
+          <label class="task-form-label" for="description-input">Description</label>
+          <textarea class="form-control" id="description-input" cols="30" rows="5"></textarea>
+          <label class="task-form-label" for="image-input">Upload Image</label>
+          <input type="file" class="form-control" id="image-input" accept="image/*" />
+        </div>
+        <div class="task-form-footer">
+          <button id="add-or-update-task-btn" class="btn large-btn" type="submit">Add</button>
+        </div>
+      </form>
+      <dialog id="historic-date-warning-dialog">
+        <form method="dialog">
+          <p class="warning-message-text">Task for historic date! Do you want to proceed?</p>
+          <div class="warning-dialog-btn-container">
+            <button id="proceed-btn" class="btn">Proceed</button>
+            <button id="discard-task-btn" class="btn">Discard</button>
+          </div>
+        </form>
+      </dialog>
+      <dialog id="empty-title-warning-dialog">
+        <p>Title is empty. Please fill it and try again.</p>
+        <button id="confirm-title-btn" class="btn">Confirm</button>
+      </dialog>
+      <dialog id="empty-description-warning-dialog">
+        <p>Description is empty. Would you like to proceed or add a description?</p>
+        <button id="add-description-btn" class="btn">Add Description</button>
+        <button id="proceed-without-description-btn" class="btn">Proceed</button>
+      </dialog>
+      <dialog id="confirm-close-dialog">
+        <form method="dialog">
+          <p class="discard-message-text">Discard changes?</p>
+          <div class="confirm-close-dialog-btn-container">
+            <button id="cancel-btn" class="btn">Cancel</button>
+            <button id="discard-btn" class="btn">Discard</button>
+          </div>
+        </form>
+      </dialog>
+      <div id="tasks-container"></div>
+    </div>
+
+    <!-- Weather App Section -->
+    <div class="weather-app">
+      <h1>Weather App</h1>
+      <input type="text" id="cityInput" placeholder="Enter city name">
+      <button id="fetchWeatherBtn">Get Weather</button>
+      <button id="clearWeatherBtn" class="btn-close">
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px">
+            <path fill="none" stroke="#F44336" stroke-width="2" d="M3 3L21 21M3 21L21 3"/>
+          </svg>
+        </button>
+      <div class="weather-info" id="weatherInfo"></div>
+    </div>
+  </main>
+  <img src="img/logo.png" alt="Logo" id="logo">
+  <script src="script.js"></script>
+</body>
+
+</html>
